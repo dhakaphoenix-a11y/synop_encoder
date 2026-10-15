@@ -12,6 +12,7 @@
 .card h2{display:flex;align-items:center;gap:.55rem;letter-spacing:.01em}.card h2:before{content:"";width:.42rem;height:1.05rem;border-radius:8px;background:linear-gradient(#21a3aa,#176d91)}.rain-card{border-color:#c5dce1;background:linear-gradient(135deg,#fff,#f3fbfa);box-shadow:0 7px 24px #157a8220}.results span{padding:.55rem .8rem;border:1px solid #d9e6eb;border-radius:10px;background:#f7fafc}.rain-card .field label{color:#175f6d}
 .summary-card{border-color:#c5dce1;background:linear-gradient(135deg,#fff,#f4f8fc)}#summary{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;padding:1rem;border:1px solid #dce7eb;border-radius:11px;background:#f7fafb;color:var(--ink);font:500 .96rem/1.75 ui-monospace,SFMono-Regular,Consolas,monospace}
 dialog{width:min(92vw,30rem);border:1px solid var(--line);border-radius:16px;padding:1.25rem;color:var(--ink);box-shadow:0 18px 60px #102f4960}dialog::backdrop{background:#102f4980;backdrop-filter:blur(3px)}dialog h2{margin:0 0 .4rem}dialog p{color:var(--muted);margin:.25rem 0 1rem}dialog .field{margin:.75rem 0}
+.average-result{display:block;margin-top:.3rem;color:var(--blue);font-size:1.05rem;font-weight:800;letter-spacing:.02em}
 </style>
 </head>
 <body>
@@ -72,12 +73,12 @@ WX: CLEAR</pre><div class="actions"><button class="secondary" type="button" id="
 <div class="field"><label for="meter-prev-03">Previous day 03 UTC reading</label><input id="meter-prev-03" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="e.g. 066376"></div>
 <div class="field"><label for="meter-prev-12">Previous day 12 UTC reading</label><input id="meter-prev-12" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="e.g. 066476"></div>
 <div class="field"><label for="meter-current-03-a">Current day 03 UTC reading</label><input id="meter-current-03-a" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="e.g. 066576"></div>
-<div class="field"><label>15-hour average (previous 12 → current 03)</label><output id="average-15" class="hint">Enter all three six-digit readings.</output></div>
-<div class="field"><label>24-hour average (previous 03 → current 03)</label><output id="average-24" class="hint">Enter all three six-digit readings.</output></div>
+<div class="field"><label>15-hour average (previous 12 → current 03)</label><output id="average-15" class="average-result">Enter all three six-digit readings.</output></div>
+<div class="field"><label>24-hour average (previous 03 → current 03)</label><output id="average-24" class="average-result">Enter all three six-digit readings.</output></div>
 <div class="subheading">12 UTC report — two readings</div>
 <div class="field"><label for="meter-current-03-b">Current day 03 UTC reading (shared)</label><input id="meter-current-03-b" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="e.g. 066576"></div>
 <div class="field"><label for="meter-current-12">Current day 12 UTC reading</label><input id="meter-current-12" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="e.g. 066776"></div>
-<div class="field"><label>9-hour average (current 03 → current 12)</label><output id="average-9" class="hint">Enter both six-digit readings.</output></div>
+<div class="field"><label>9-hour average (current 03 → current 12)</label><output id="average-9" class="average-result">Enter both six-digit readings.</output></div>
 </div><p class="hint">The table maps anemometer run in kilometres over the selected interval to average whole knots. The displayed km/h is rounded from that knot code.</p></section>
 </form>
 </main>
